@@ -8,15 +8,7 @@
         "text": "Test text"
     },
     {
-        "title": "Title",
+        "title": "Tile",
         "text": "note text"
-    },
-    {
-        "title": "Title 2",
-        "text": "note text2"
-    },
-    {
-        "title": "Title 3",
-        "text": "note text 3"
     }
 ]
