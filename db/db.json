@@ -1,33 +1,22 @@
 [
-  {
-    "title": "Test Title",
-    "text": "Test text"
-  },
-  {
-    "title": "Title2",
-    "text": "Text2"
-  },
-  {
-    "title": "Title 3",
-    "text": "text3"
-  },
-  {
-    "title": "Get haircut",
-    "text": "Where are you even? I cannot find you anymore. I miss you."
-  },
-  {
-    "title": "Title ID?",
-    "text": "Did the id thing work?",
-    "note_id": "fb59279b-f6d1-4a80-88e4-536c91a61839"
-  },
-  {
-    "title": "Note Access",
-    "text": "Can we access this note? ",
-    "note_id": "cb38903e-a0c8-4949-a186-712c3deeff52"
-  },
-  {
-    "title": "This one? ",
-    "text": "No?",
-    "note_id": "ce9f7ecf-1582-46e5-880f-e983e6ed5074"
-  }
+    {
+        "title": "Title ID?",
+        "text": "Did the id thing work?",
+        "id": "fb59279b-f6d1-4a80-88e4-536c91a61839"
+    },
+    {
+        "title": "Note Access",
+        "text": "Can we access this note? ",
+        "id": "cb38903e-a0c8-4949-a186-712c3deeff52"
+    },
+    {
+        "title": "This one? ",
+        "text": "No?",
+        "id": "ce9f7ecf-1582-46e5-880f-e983e6ed5074"
+    },
+    {
+        "title": "Hm",
+        "text": "I don't know",
+        "id": "ec1020e0-e0b2-4b32-85e8-656b993e7825"
+    }
 ]

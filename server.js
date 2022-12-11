@@ -4,8 +4,6 @@ const fs = require('fs');
 const util = require('util');
 const { v4: uuidv4 } = require('uuid');
 
-const db = require('./db/db.json');
-const { json } = require('express');
 const PORT = 3001;
 
 const app = express();
@@ -33,12 +31,12 @@ app.get('/api/notes', (req, res) => {
 });
 
 //get specific note
-app.get('/api/notes/:note_id', (req, res) => {
-    const noteId = req.params.note_id;
+app.get('/api/notes/:id', (req, res) => {
+    const noteId = req.params.id;
     readFromFile('./db/db.json')
     .then((data) => JSON.parse(data))
     .then((json) => {
-        const result = json.filter((note) => note.note_id === noteId);
+        const result = json.filter((note) => note.id === noteId);
         return result.length > 0
             ? res.json(result)
             : res.json('No note with that ID');
@@ -57,7 +55,7 @@ app.post('/api/notes', (req, res) => {
         const newNote = {
             title,
             text,
-            note_id: uuidv4(),
+            id: uuidv4(),
         };
 
         // Obtain existing notes
