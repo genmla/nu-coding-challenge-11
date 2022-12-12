@@ -3,9 +3,7 @@ Note Taker applicaiton
 
 ## Description
 
-(Provide a short description explaining the what, why, and how of your project.)
-
-This is a simple note-taking applicaiton that allows the user to write and save notes. The notes will be saved on the server so the user can access them throughout their use of the applicaiton. Building this applicaiton tests our knowledge of serer-side response for the applicaiton. 
+This is a simple note-taking applicaiton that allows the user to write,  save and delete notes. The notes are saved on the server in a json file so the user can access them throughout their use of the applicaiton. Building this applicaiton tests our knowledge of the back-end development of server-side responses and data manipulation. 
 
 ## Table of Contents (Optional)
 
@@ -16,13 +14,18 @@ This is a simple note-taking applicaiton that allows the user to write and save 
 
 ## Installation
 
-(What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+[Node.js](https://nodejs.org/)
+[Express.js](https://expressjs.com/)
+
+The user should run "npm install" when navigating to the project's directory within the command line to install the dependencies in the package.json file
 
 ## Usage
 
-(To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+The user can click the "Get Started" button to open up the Notes taking app. Click the + icon at the top right corner to create a new note. Once a title and a text for the note is created, a save button icon will appear. The user can click on the save button icon to save the note to the left-hand side of the page. 
 
-![alt text](assets/images/screenshot.png))
+The user can select saved notes by the notes titles listed on the left hand side of the page to bring up their details. They can also click the red trashcan icon next to the saved notes title to delete the note.
+
+![Note take displaying the start of app, the accessing of saved notes, the creation of a new note, saving of the new note, and deletion of the new note](./assets/Note%20Taker.gif))
 
 ## Credits
 
