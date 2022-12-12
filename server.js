@@ -5,7 +5,7 @@ const util = require('util');
 const { v4: uuidv4 } = require('uuid');
 const { json } = require('body-parser');
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3011;
 
 const app = express();
 
