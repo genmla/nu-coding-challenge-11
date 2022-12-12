@@ -3,12 +3,18 @@ const path = require('path');
 const fs = require('fs');
 const util = require('util');
 const { v4: uuidv4 } = require('uuid');
+const { json } = require('body-parser');
 
 const PORT = 3001;
 
 const app = express();
 
 const readFromFile = util.promisify(fs.readFile);
+
+const writeToFile = (destination, content) =>
+  fs.writeFile(destination, JSON.stringify(content, null, 4), (err) =>
+    err ? console.error(err) : console.info(`\nData written to ${destination}`)
+  );
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -56,6 +62,7 @@ app.post('/api/notes', (req, res) => {
             title,
             text,
             id: uuidv4(),
+            //need this to match the index.js file at line 56. WTH dude
         };
 
         // Obtain existing notes
@@ -91,6 +98,20 @@ app.post('/api/notes', (req, res) => {
     } else {
         res.status(500).json('Error in posting review');
     }
+});
+
+//delete notes
+app.delete('/api/notes/:id', (req, res) =>{
+    const noteId = req.params.id;
+    readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+        const result = json.filter((note) => note.id !== noteId);
+
+        writeToFile('./db/db.json', result);
+        
+        res.json(`Item ${noteId} has been deleted 🗑️`);
+    })
 });
 
 app.listen(PORT, () =>
