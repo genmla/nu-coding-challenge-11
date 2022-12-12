@@ -5,8 +5,9 @@ Note Taker applicaiton
 
 This is a simple note-taking applicaiton that allows the user to write,  save and delete notes. The notes are saved on the server in a json file so the user can access them throughout their use of the applicaiton. Building this applicaiton tests our knowledge of the back-end development of server-side responses and data manipulation. 
 
-## Table of Contents (Optional)
+## Table of Contents
 
+- [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
